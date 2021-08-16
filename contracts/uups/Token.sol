@@ -14,7 +14,8 @@ contract MyTokenV1 is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableU
     function initialize() public initializer {
         __ERC20_init("My Token", "MTK");
         __Ownable_init();
-        _mint(msg.sender, 100 * 10**decimals());
+        
+        _mint(msg.sender, 10 * 1000 * 1000 * 1000 * 10**decimals());
     }
 
     function _authorizeUpgrade(address) internal 

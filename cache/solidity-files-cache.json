@@ -395,10 +395,10 @@
         "StorageSlotUpgradeable"
       ]
     },
-    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/MyToken.sol": {
-      "lastModificationDate": 1629106854708,
-      "contentHash": "42233d9d89b3cb8900af97c82cc0fd3d",
-      "sourceName": "contracts/uups/MyToken.sol",
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/Token.sol": {
+      "lastModificationDate": 1629132769350,
+      "contentHash": "cd536ec8cfbd4f879dfdc3f5dbaf138f",
+      "sourceName": "contracts/uups/Token.sol",
       "solcConfig": {
         "version": "0.8.3",
         "settings": {

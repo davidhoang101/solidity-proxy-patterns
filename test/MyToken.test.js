@@ -1,3 +1,7 @@
+/*
+run:
+npx hardhat test
+*/
 const hre = require('hardhat');
 const assert = require('assert')
 
@@ -12,7 +16,7 @@ before('get fatories', async () => {
 it('Deploys', async () => {
   //deploy with proxy plugin
   instanceV1 = await hre.upgrades.deployProxy(V1, {kind:'uups'});
-
+  
   //upgrade to v2
   instanceV2 = await hre.upgrades.upgradeProxy(instanceV1, V2);
 
@@ -21,11 +25,25 @@ it('Deploys', async () => {
 
 })
 
+it("Token total supply onwer check", async () => {
+  const [owner] = await ethers.getSigners();
+  // console.log("Owner address: ",owner.address);
+
+  const ownerBalance = await instanceV3.balanceOf(owner.address);
+  // console.log("ownerBalance: ", ownerBalance.toString());
+
+  const decimals = await instanceV3.decimals();
+  // console.log("decimals: ", decimals.toString());
+
+  const totalSupply = await instanceV3.totalSupply();
+  assert.equal(ownerBalance.toString(), totalSupply.toString(), 'Wrong token balance of onwer');
+  
+})
+
 it('accessing v1 data', async () => {
   //access v1 data
   await instanceV3.setV1Data();
   const v1data = await instanceV3.getV1Data();
-
   assert.equal(v1data, 'This is v1 data', 'Can not get v1 data');
 })
 
@@ -48,5 +66,4 @@ it('accessing v3 data', async () => {
 it('get proxy contract address', async () => {
   //access v1 data
   assert.notEqual(instanceV3.address, null, 'Can not get proxy contract address');
-  console.log(instanceV3.address);
 })
