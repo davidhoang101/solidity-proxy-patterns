@@ -1,0 +1,27 @@
+{
+  "name": "uups-poxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunghoang74/uups-poxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunghoang74/uups-poxy/issues"
+  },
+  "homepage": "https://github.com/dunghoang74/uups-poxy#readme",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@openzeppelin/contracts-upgradeable": "^4.2.0",
+    "@openzeppelin/hardhat-upgrades": "^1.9.0",
+    "ethers": "^5.4.4",
+    "hardhat": "^2.6.0"
+  }
+}
