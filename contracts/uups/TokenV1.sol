@@ -30,31 +30,15 @@ contract MyTokenV1 is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableU
     function getV1Data() public view returns(string memory) {
         return v1Data;
     }
-}
 
-contract MyTokenV2 is MyTokenV1{
-    string v2Data;
-
-    function setV2Data() public {
-        v2Data = 'This string from V2';
+    function commonFunction() public view returns(string memory) {
+        return "this is a common function";
     }
 
-    function getV2Data() public view returns(string memory) {
-        return v2Data;
-    }
-}
-
-contract MyTokenV3 is MyTokenV2 {
-    // string v2Data; //Now data storage in V2 must remain if V3 is inherited from V1
-    string v3Data;
-
-    function setV3Data() public {
-        v3Data = 'This string from V3';
+    function getImplementation()  public returns (address) {
+        return _getImplementation();
     }
 
-    function getV3Data() public view returns(string memory) {
-        return v3Data;
-    }
 }
 
 

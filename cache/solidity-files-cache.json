@@ -395,10 +395,40 @@
         "StorageSlotUpgradeable"
       ]
     },
-    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/Token.sol": {
-      "lastModificationDate": 1629132769350,
-      "contentHash": "cd536ec8cfbd4f879dfdc3f5dbaf138f",
-      "sourceName": "contracts/uups/Token.sol",
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/CustomContract.sol": {
+      "lastModificationDate": 1629137512110,
+      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
+      "sourceName": "contracts/uups/CustomContract.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/TokenV1.sol": {
+      "lastModificationDate": 1629180727400,
+      "contentHash": "5f91df0bd1c4be35bfca2fba36a8088d",
+      "sourceName": "contracts/uups/TokenV1.sol",
       "solcConfig": {
         "version": "0.8.3",
         "settings": {
@@ -431,9 +461,79 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "MyTokenV1",
-        "MyTokenV2",
+        "MyTokenV1"
+      ]
+    },
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/TokenV3.sol": {
+      "lastModificationDate": 1629141466811,
+      "contentHash": "0c0b565ff2937e5401a5eb3655ee814f",
+      "sourceName": "contracts/uups/TokenV3.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TokenV1.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
         "MyTokenV3"
+      ]
+    },
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/TokenV2.sol": {
+      "lastModificationDate": 1629140315722,
+      "contentHash": "d9713e53fc70eebd44d065d7b13ee62f",
+      "sourceName": "contracts/uups/TokenV2.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TokenV1.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyTokenV2"
       ]
     }
   }

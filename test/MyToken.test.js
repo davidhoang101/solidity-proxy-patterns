@@ -40,6 +40,13 @@ it("Token total supply onwer check", async () => {
   
 })
 
+it('Should be able to get implementation address', async () => {
+  //access v1 data
+  const implementation = await instanceV3.getImplementation();
+  console.log('implementation', implementation);
+  assert.notEqual(implementation,null, 'Cannot get implementation address');
+})
+
 it('accessing v1 data', async () => {
   //access v1 data
   await instanceV3.setV1Data();
