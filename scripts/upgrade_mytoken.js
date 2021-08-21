@@ -1,7 +1,7 @@
 /*
 npx hardhat run scripts/deploy.js --network <network-name>
 */
-// const { ethers } = require('hardhat');
+const { ethers } = require('hardhat');
 // const hre = require('hardhat');
 // const ethers = require('ethers');
 

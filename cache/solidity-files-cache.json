@@ -395,36 +395,6 @@
         "StorageSlotUpgradeable"
       ]
     },
-    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/CustomContract.sol": {
-      "lastModificationDate": 1629137512110,
-      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
-      "sourceName": "contracts/uups/CustomContract.sol",
-      "solcConfig": {
-        "version": "0.8.3",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
     "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/TokenV1.sol": {
       "lastModificationDate": 1629180727400,
       "contentHash": "5f91df0bd1c4be35bfca2fba36a8088d",
@@ -534,6 +504,80 @@
       ],
       "artifacts": [
         "MyTokenV2"
+      ]
+    },
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/A.sol": {
+      "lastModificationDate": 1629438259135,
+      "contentHash": "fb06caebac5b6a38fac88755761b6acc",
+      "sourceName": "contracts/uups/A.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "A"
+      ]
+    },
+    "/Users/hoangdung/Documents/BLOCKCHAIN/proxy-patterns/contracts/uups/A1.sol": {
+      "lastModificationDate": 1629438320221,
+      "contentHash": "02a210ca73491d786248910ad6a24f41",
+      "sourceName": "contracts/uups/A1.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./A.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "A1"
       ]
     }
   }

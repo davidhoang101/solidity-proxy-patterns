@@ -13,6 +13,7 @@ before('get fatories', async () => {
   V3 = await hre.ethers.getContractFactory('MyTokenV3');
 })
 
+//####### Deployment https://github.com/Bholdus/smart-contracts/blob/main/test/token/CoinBHO.test.ts
 it('Deploys', async () => {
   //deploy with proxy plugin
   instanceV1 = await hre.upgrades.deployProxy(V1, {kind:'uups'});
@@ -23,6 +24,61 @@ it('Deploys', async () => {
   //upgrade to V3
   instanceV3 = await hre.upgrades.upgradeProxy(instanceV1, V3);
 
+})
+
+it('Should have 18 decimals', async () => {
+  assert(await instanceV3.decimals().toString(), 18);
+});
+
+it('Should have 10B total supply', async () => {
+
+})
+it('Should set the right owner', async function () {
+
+})
+
+it('Should assign the total supply of tokens to the owner', async function () {
+
+});
+
+
+//###### Transactions
+it('Should transfer tokens between accounts', async function () {
+})
+
+it('Should fail if sender doesn’t have enough tokens', async function () {
+})
+
+it('Should update balances after transfers', async function () {
+})
+
+it('should reduce total supply when burn', async function () {
+})
+
+it('should revert when burn amount exceeds balance', async function () {
+})
+
+it('should revert when burnFrom amount exceeds allowance', async function () {
+})
+
+it('should burnFrom really burn tokens, reduce allowance, reduce total supply', async function () {
+})
+
+it('should increase total supply when mint', async function () {
+  // const initialOwnerBalance = await coinContract.balanceOf(owner.address);
+  //     const mintAmount = 1_000_000_000;
+  //     await coinContract.mint(mintAmount);
+  //     const totalSupply = await coinContract.totalSupply();
+  //     expect(totalSupply).to.equal(
+  //       BigNumber.from(initialOwnerBalance).add(mintAmount)
+  //     );
+})
+
+it('should revert when minting from stranger', async function () {
+  // const mintAmount = 1_000_000_000;
+  //     await expect(
+  //       coinContract.connect(addr1).mint(mintAmount)
+  //     ).to.revertedWith('Ownable: caller is not the owner');
 })
 
 it("Token total supply onwer check", async () => {
